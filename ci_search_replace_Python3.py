@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 # Prompt
 # Comment out if you want to code it into the script 
 
-xldUrl = raw_input("XL Deploy URL: ") 
+xldUrl = input("XL Deploy URL: ") 
 
 if (str(xldUrl[len(xldUrl)-1:]) != '/') : 
     xldUrl = xldUrl + '/';
@@ -14,8 +14,8 @@ if (str(xldUrl[len(xldUrl)-1:]) != '/') :
 base_url = xldUrl + 'deployit/repository/ci/'
 uri_get_ci = xldUrl + 'deployit/repository/v3/query?resultsPerPage=-1';
 
-xldUser = raw_input("Username: ") 
-xldPass = raw_input("Password: ") 
+xldUser = input("Username: ") 
+xldPass = input("Password: ") 
 
 # Use values coded into the script
 
@@ -73,7 +73,7 @@ print("This script won't back up your data. A backup using xl generate or a data
 print("To acknowledge that you have the required backup, type yes.")
 print("");
 
-confirmTest = raw_input("Continue? (YES/no): ") 
+confirmTest = input("Continue? (YES/no): ") 
 if(str.upper(confirmTest) != "YES"): 
     exit();
 
